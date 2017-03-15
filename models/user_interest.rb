@@ -1,5 +1,4 @@
 class UserInterest < ActiveRecord::Base
-  has_many :users
-  has_many :interests
-  # linking to a dish
+  belongs_to :user
+  belongs_to :interest
 end
