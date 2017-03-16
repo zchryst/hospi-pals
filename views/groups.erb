@@ -3,6 +3,9 @@
   <div>
     <h2><%= group.name %></h2>
     <p><%= group.description %></p>
+    <form action="/groups/<%= group.id %>/join" method="post">
+      <button>Join</button>
+    </form>
     <hr>
   </div>
 <% end %>

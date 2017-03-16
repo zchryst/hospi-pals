@@ -61,7 +61,12 @@ post '/groups/new' do
   group.name = params[:name]
   group.description = params[:description]
   group.owner_id = current_user.id
-  if group.save
+  group.save
+  user_group = UserGroup.new
+  user_group.group_id = group.id
+  user_group.user_id = current_user.id
+  user_group.save
+  if !!group.id && !!user_group.id
     redirect "/groups/#{ group.id }"
   end
 end
@@ -77,6 +82,19 @@ post '/groups/:id' do
   comment.group_id = params[:id]
   comment.owner_id = current_user.id
   if comment.save
+    redirect "/groups/#{params[:id]}"
+  end
+end
+
+# post '/groups/2/join' do
+#   "Hello World"
+# end
+
+post '/groups/:id/join' do
+  user_group = UserGroup.new
+  user_group.group_id = params[:id]
+  user_group.user_id = current_user.id
+  if user_group.save
     redirect "/groups/#{params[:id]}"
   end
 end
