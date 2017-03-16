@@ -1,7 +1,7 @@
 
 require 'sinatra'
-require 'sinatra/reloader'
-require "pry"
+# require 'sinatra/reloader'
+# require "pry"
 require "active_record"
 require_relative 'database_config'
 require_relative "models/comment"
@@ -36,7 +36,6 @@ helpers do
   def logged_in?  # should return a boolean
     !!current_user
   end
-
 
 end
 

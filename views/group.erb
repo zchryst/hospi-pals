@@ -1,12 +1,17 @@
 
-<%= @group.comments.each do |comment| %>
+<% @group.comments.each do |comment| %>
   <div class="message">
     <h3>
-      <%= @group.users.find(comment.user_id).username %>
+      <%= @group.users.find(comment.owner_id).username %>
     </h3>
     <p>
       <%= comment.post %>
     </p>
-
   </div>
-<%= end %>
+<% end %>
+
+<form action="/groups/:id" method="post">
+  <input name="comment" placeholder="message <%= @group.name %>">
+  <button></button>
+
+</form>
