@@ -18,17 +18,16 @@ body {
 
 .user-groups {
   width: 50%;
-  height: 350px;
+  height: 80%;
   background-color: steelblue;
   display: inline-block;
   vertical-align: top;
   margin: 40px 20px 20px 20px;
-
 }
 
 .user-profile {
   width: 15%;
-  height: 350px;
+  height: 80%;
   background-color: steelblue;
   display: inline-block;
   margin: 40px 20px 20px 20px;
