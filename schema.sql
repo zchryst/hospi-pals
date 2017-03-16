@@ -14,8 +14,9 @@ CREATE TABLE locations (
 
 CREATE TABLE comments (
   id SERIAL4 PRIMARY KEY,
-  user_id INTEGER,
-  group_id INTEGER
+  owner_id INTEGER,
+  group_id INTEGER,
+  post TEXT
 );
 
 CREATE TABLE user_groups (
@@ -27,7 +28,8 @@ CREATE TABLE user_groups (
 CREATE TABLE groups (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(400),
-  description TEXT
+  description TEXT,
+  owner_id INTEGER
 );
 
 CREATE TABLE user_interests (

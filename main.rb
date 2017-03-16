@@ -23,6 +23,10 @@ enable :sessions
 #   end
 # end
 
+after do
+  ActiveRecord::Base.connection.close
+end
+
 helpers do
 
   def current_user
@@ -37,8 +41,38 @@ helpers do
 end
 
 get '/' do
-  erb :index
+  if logged_in?
+    erb :index
+  else
+    redirect '/session/new'
+  end
 end
+
+get '/groups' do
+  @groups = Group.all
+  erb :groups
+end
+
+get '/groups/new' do
+  erb :new_group
+end
+
+post '/groups/new' do
+  group = Group.new
+  group.name = params[:name]
+  group.description = params[:description]
+  group.owner_id = current_user.id
+  if group.save
+    redirect "/groups/#{ group.id }"
+  end
+end
+
+get '/groups/:id' do
+  @group = Group.find(params[:id])
+  erb :group
+end
+
+
 
 get '/session/new' do
   erb :login

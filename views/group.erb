@@ -1,0 +1,12 @@
+
+<%= @group.comments.each do |comment| %>
+  <div class="message">
+    <h3>
+      <%= @group.users.find(comment.user_id).username %>
+    </h3>
+    <p>
+      <%= comment.post %>
+    </p>
+
+  </div>
+<%= end %>
