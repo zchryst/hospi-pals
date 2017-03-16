@@ -1,0 +1,67 @@
+.group {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: tomato;
+}
+
+.user-groups {
+  width: 50%;
+  height: 350px;
+  background-color: steelblue;
+  display: inline-block;
+  vertical-align: top;
+  margin: 40px 20px 20px 20px;
+
+}
+
+.user-profile {
+  width: 15%;
+  height: 350px;
+  background-color: steelblue;
+  display: inline-block;
+  margin: 40px 20px 20px 20px;
+
+}
+
+.login {
+  margin: 0 auto;
+  width: 500px;
+  height: 250px;
+  /*padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;*/
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+input, textarea {
+  font: 1em sans-serif;
+  padding: .5em;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
+}
+
+textarea {
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5em;
+}
+
+.login button {
+  font: 1em sans-serif;
+  padding: .5em;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
