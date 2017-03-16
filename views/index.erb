@@ -1,18 +1,21 @@
-<h1>hello world</h1>
 
 <main>
-  <div class="user-profile">
-    <h2></h2>
-  </div>
 
-  <div class="user-groups">
-    <h2>My groups</h2>
-    <div class="group"></div>
-    <div class="group"></div>
-    <div class="group"></div>
-    <div class="group"></div>
-    <div class="group"></div>
-    <div class="group"></div>
+  <div class="home-windows">
+    <div class="user-profile">
+      <h2></h2>
+    </div>
+
+    <div class="user-groups">
+      <h2>My groups</h2>
+      <a href="/groups">Find more groups</a>
+      <% @user.groups.each do |group| %>
+      <div class="group">
+        <p><%= group.name %></p>
+
+      </div>
+      <% end %>
+    </div>
   </div>
 
 

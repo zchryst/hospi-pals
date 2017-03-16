@@ -1,6 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+
 .group {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border: 1px solid black;
   background-color: tomato;
 }
@@ -21,7 +32,6 @@
   background-color: steelblue;
   display: inline-block;
   margin: 40px 20px 20px 20px;
-
 }
 
 .login {
@@ -31,6 +41,37 @@
   /*padding: 1em;
   border: 1px solid #CCC;
   border-radius: 1em;*/
+}
+
+header {
+  background-color: #416C8D;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 40px;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+#logo-second {
+  margin-left: 30px;
+}
+
+aside {
+  display: inline;
+  height: 100%;
+  float: left;
+  width: 20%;
+  background-color: #7777B6;
+}
+
+main {
+  display: inline;
+  float: left;
+  width: 80%;
+  height: 100%;
 }
 
 form div + div {
@@ -58,6 +99,10 @@ textarea {
   height: 5em;
 }
 
+.home-windows {
+  margin: 0 auto;
+}
+
 .login button {
   font: 1em sans-serif;
   padding: .5em;
@@ -65,3 +110,23 @@ textarea {
   box-sizing: border-box;
   border: 1px solid #999;
 }
+
+/* As hex codes */
+
+.color-primary-0 { color: #285679 }	/* Main Primary color */
+.color-primary-1 { color: #688CA8 }
+.color-primary-2 { color: #416C8D }
+.color-primary-3 { color: #164163 }
+.color-primary-4 { color: #052B47 }
+
+.color-secondary-1-0 { color: #343484 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #7777B6 }
+.color-secondary-1-2 { color: #4E4E99 }
+.color-secondary-1-3 { color: #1F1F6B }
+.color-secondary-1-4 { color: #0C0C4E }
+
+.color-secondary-2-0 { color: #25815A }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #6AB393 }
+.color-secondary-2-2 { color: #3F9671 }
+.color-secondary-2-3 { color: #126944 }
+.color-secondary-2-4 { color: #014C2C }*/
