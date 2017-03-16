@@ -1,7 +1,7 @@
 
 require 'sinatra'
-# require 'sinatra/reloader'
-# require "pry"
+require 'sinatra/reloader'
+require "pry"
 require "active_record"
 require_relative 'database_config'
 require_relative "models/comment"
@@ -71,7 +71,15 @@ get '/groups/:id' do
   erb :group
 end
 
-
+post '/groups/:id' do
+  comment = Comment.new
+  comment.post = params[:post]
+  comment.group_id = params[:id]
+  comment.owner_id = current_user.id
+  if comment.save
+    redirect "/groups/#{params[:id]}"
+  end
+end
 
 get '/session/new' do
   erb :login

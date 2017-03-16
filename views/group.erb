@@ -10,8 +10,8 @@
   </div>
 <% end %>
 
-<form action="/groups/:id" method="post">
-  <input name="comment" placeholder="message <%= @group.name %>">
-  <button></button>
+<form action="/groups/<%= @group.id %>" method="post">
+  <input name="post" placeholder="message <%= @group.name %>">
+  <button>send</button>
 
 </form>
