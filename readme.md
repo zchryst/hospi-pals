@@ -29,8 +29,8 @@ Super difficult to plan out the tables, particularly as I started making the app
 
 ## FUTURE DEVELOPMENT
 
-*Add more ability to control groups as an admin
-*Improve styling of the entire things
-*Create ability to edit profile and group
-*Create chat with individual users
-*Just a whole lot more things
+* Add more ability to control groups as an admin
+* Improve styling of the entire things
+* Create ability to edit profile and group
+* Create chat with individual users
+* Just a whole lot more things
