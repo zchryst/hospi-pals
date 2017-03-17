@@ -1,27 +1,36 @@
 <main>
+  <div class="login-containers">
+    <div class="about container">
+      <div class="container-contents">
+        <h2>Hi, welcome to hospi-pals</h2>
+        <h3>About this site</h3>
+        <p>This site hopes to create a safe place for
+          people going through treatment to come
+          an talk together, create events to meet up,
+          and provide support and friendship to one another
+        </p>
+      </div>
+    </div>
 
-  <div class="about">
-    <h2>Hi, welcome to hospi-pals</h2>
-    <h3>About this site</h3>
-    <p>This site hopes to create a safe place for
-    people going through treatment to come
-    an talk together, create events to meet up,
-    and provide support and friendship to one another</p>
+    <div class="container">
+      <form class="login" action="/session" method="post">
+        <div class="container-contents">
+          <div>
+            <input name="username" placeholder="Username">
+          </div>
+          <div>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <div>
+            <button>Login</button>
+          </div>
+          <div class="addition">
+            <a href="/user/new">New user?</a>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-
-
-  <form class="login" action="/session" method="post">
-    <div>
-      <input name="username" placeholder="Username">
-    </div>
-    <div>
-      <input type="password" name="password" placeholder="Password">
-    </div>
-    <div>
-      <button>Login</button>
-    </div>
-    <a href="/user/new">Forgotten your password?</a>
-  </form>
 
 
 

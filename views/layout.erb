@@ -8,36 +8,47 @@
 </head>
 <body>
   <header>
-    <h1>
-      <div>HOSPI</div>
-      <div id="logo-second">-PALS</div>
+    <h1 class="logo">
+      <a href="/">
+        <div>HOSPI</div>
+        <div id="logo-second">-PALS</div>
+      </a>
     </h1>
+    <div class="session-status">
+      <% if logged_in? %>
+      <div>
+        LOGGED IN <%= current_user.username.upcase %>
+      </div>
+      <form action="/session" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button id="logout">LOGOUT</button>
+      </form>
+      <% else %>
+      PLEASE LOGIN
+      <% end %>
+    </div>
   </header>
 
   <% if logged_in? %>
     <aside class="">
-      <h5>GROUPS</h5>
-      <% current_user.groups.each do |group| %>
-        <li><a href="/groups/<%= group.id %>">group.name</a></li>
-      <% end %>
-      <h5>PEOPLE</h5>
-        <li>...</li>
-        <li>...</li>
-        <li>...</li>
+      <section class="navigation">
+        <h5>GROUPS</h5>
+        <% current_user.groups.each do |group| %>
+          <li><a href="/groups/<%= group.id %>">@  <%= group.name %></a></li>
+        <% end %>
+        <h5>PEOPLE</h5>
+          <li>*    Jane Doe</li>
+          <li>*    Bugs Bunny</li>
+          <li>*    Alfons Vanrostie</li>
+      </section>
     </aside>
   <% end %>
 
-  <% if logged_in? %>
-    logged in as <%= current_user.username %>
-    <form action="/session" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <button>logout</button>
-    </form>
-  <% else %>
-    not logged in
-  <% end %>
 
-  <%= yield %>
 
+  <section class="wrapper">
+    <%= yield %>
+  </section>
 </body>
+<script src='/javascripts/application.js'></script>
 </html>

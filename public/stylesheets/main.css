@@ -5,15 +5,7 @@
 html,
 body {
   margin: 0;
-  height: 100%;
-}
-
-
-.group {
-  width: 80px;
-  height: 80px;
-  border: 1px solid black;
-  background-color: tomato;
+  height: 100vh;
 }
 
 .user-groups {
@@ -45,6 +37,7 @@ body {
 header {
   background-color: #416C8D;
   margin: 0;
+  height: 16vh;
 }
 
 h1 {
@@ -54,16 +47,134 @@ h1 {
   padding: 5px;
 }
 
+.logo {
+  display: inline-block;
+}
+
+.session-status {
+  float: right;
+  text-align: right;
+  vertical-align: top;
+  margin: 1em;
+}
+
+#logout {
+  padding: .5em;
+  width: 100%;
+  border-radius: .5em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 #logo-second {
   margin-left: 30px;
 }
 
+.container {
+  padding: 30px;
+  width: 35%;
+  height: 60vh;
+  text-align: center;
+  background-color: white;
+  border: 3px solid #6AB393;
+  display: inline-block;
+  margin: 12vh 2.5vw;
+  vertical-align: top;
+  border-radius: 3em;
+}
+
+.addition {
+  margin-top: 10px;
+  font: 1em sans-serif;
+  padding: 1em;
+}
+
 aside {
   display: inline;
-  height: 100%;
+  height: 84vh;
   float: left;
   width: 20%;
   background-color: #7777B6;
+}
+
+.wrapper {
+  height: 84vh;
+  background-color: rgb(185, 226, 238);
+}
+
+.group-messages {
+  height: 76vh;
+  overflow: scroll;
+  padding: 0 40px;
+}
+
+.group-icon {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  font: 1em sans-serif;
+  padding: .1em;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+.chat-bar {
+  height: 8vh;
+  width: 80%;
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+}
+
+.chat-bar input {
+  /*margin-left: 25%;
+  margin-right: 5%;*/
+  width: 96%;
+  border-radius: 5px;
+  margin-top: 15px;
+  font: 1em sans-serif;
+  padding: .5em;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+.navigation {
+  margin: 20px 5%;
+}
+
+.navigation li {
+  list-style: none;
+  padding-top: 1em;
+}
+
+.login {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+.container-contents {
+  /*vertical-align: middle;*/
+  /*margin: 40% auto;*/
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.login-containers {
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 main {
@@ -77,10 +188,11 @@ form div + div {
   margin-top: 1em;
 }
 
-input, textarea {
+.login input{
   font: 1em sans-serif;
   padding: .5em;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   box-sizing: border-box;
   border: 1px solid #999;
 }
@@ -105,7 +217,7 @@ textarea {
 .login button {
   font: 1em sans-serif;
   padding: .5em;
-  width: 300px;
+  width: 100%;
   box-sizing: border-box;
   border: 1px solid #999;
 }
