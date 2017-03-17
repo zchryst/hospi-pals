@@ -1,7 +1,5 @@
 
-# require 'sinatra'
-# require 'sinatra/reloader'
-# require "pry"
+require "sinatra"
 require "active_record"
 require_relative 'database_config'
 require_relative "models/comment"
