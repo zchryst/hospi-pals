@@ -17,7 +17,7 @@
     <div class="session-status">
       <% if logged_in? %>
       <div>
-        <%= current_user.username.upcase %> LOGGED IN 
+        <%= current_user.username.upcase %> LOGGED IN
         <form action="/session" method="post">
           <input type="hidden" name="_method" value="delete">
           <button id="logout">LOGOUT</button>
@@ -30,16 +30,31 @@
   </header>
 
   <% if logged_in? %>
-    <aside class="">
+    <aside>
       <section class="navigation">
-        <h5>GROUPS</h5>
-        <% current_user.groups.each do |group| %>
-          <li><a href="/groups/<%= group.id %>">@  <%= group.name %></a></li>
+        <div class="title">
+          <span>GROUPS</span>
+          <span>&#x2295</span>
+        </div>
+        <% current_user.groups.each do |user_group| %>
+          <li><a href="/groups/<%= user_group.id %>">@  <%= user_group.name %></a></li>
         <% end %>
-        <h5>PEOPLE</h5>
-          <li>*    Jane Doe</li>
-          <li>*    Bugs Bunny</li>
-          <li>*    Alfons Vanrostie</li>
+        <div class="title">
+          <span>PEOPLE</span>
+          <span>&#x2295</span>
+        </div>
+          <li>
+            <span>*</span>
+            <span>Jane Doe</span>
+          </li>
+          <li>
+            <span>*</span>
+            <span>Bugs Bunny</span>
+          </li>
+          <li>
+            <span>*</span>
+            <span>Alfons Vanrostie</span>
+          </li>
       </section>
     </aside>
   <% end %>
