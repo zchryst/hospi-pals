@@ -10,19 +10,19 @@
   <header>
     <h1 class="logo">
       <a href="/">
-        <div>HOSPI</div>
-        <div id="logo-second">-PALS</div>
+        <div>HOSPI-PALS</div>
+        <!-- <div id="logo-second">-PALS</div> -->
       </a>
     </h1>
     <div class="session-status">
       <% if logged_in? %>
       <div>
-        LOGGED IN <%= current_user.username.upcase %>
+        <%= current_user.username.upcase %> LOGGED IN 
+        <form action="/session" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <button id="logout">LOGOUT</button>
+        </form>
       </div>
-      <form action="/session" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <button id="logout">LOGOUT</button>
-      </form>
       <% else %>
       PLEASE LOGIN
       <% end %>

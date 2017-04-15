@@ -37,7 +37,7 @@ body {
 header {
   background-color: #416C8D;
   margin: 0;
-  height: 16vh;
+  height: 8vh;
 }
 
 h1 {
@@ -49,17 +49,21 @@ h1 {
 
 .logo {
   display: inline-block;
+  margin: 0 1vw;
+  padding: 0;
+  line-height: 8vh;
+  vertical-align: middle;
 }
 
 .session-status {
   float: right;
   text-align: right;
   vertical-align: top;
-  margin: 1em;
+  margin: .3em 1em;
 }
 
 #logout {
-  padding: .5em;
+  padding: .2em;
   width: 100%;
   border-radius: .5em;
 }
@@ -69,19 +73,17 @@ a {
   color: black;
 }
 
-#logo-second {
-  margin-left: 30px;
-}
+
 
 .container {
   padding: 30px;
-  width: 35%;
+  width: 30vw;
   height: 60vh;
   text-align: center;
   background-color: white;
   border: 3px solid #6AB393;
   display: inline-block;
-  margin: 12vh 2.5vw;
+  margin: 12vh 1vw;
   vertical-align: top;
   border-radius: 3em;
 }
@@ -94,15 +96,16 @@ a {
 
 aside {
   display: inline;
-  height: 84vh;
+  height: 92vh;
   float: left;
   width: 20%;
   background-color: #7777B6;
 }
 
 .wrapper {
-  height: 84vh;
-  background-color: rgb(185, 226, 238);
+  height: 92vh;
+  width: 80%;
+  float: right;
 }
 
 .group-messages {

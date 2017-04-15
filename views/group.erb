@@ -1,13 +1,13 @@
 <section class="group-messages" id="group-messages">
   <% @group.comments.each do |comment| %>
-  <div class="message">
-    <h3>
-      <%= @group.users.find(comment.owner_id).username %>
-    </h3>
-    <p>
-      <%= comment.post %>
-    </p>
-  </div>
+    <div class="message">
+      <h3>
+        <%= @group.users.find(comment.owner_id).username %>
+      </h3>
+      <p>
+        <%= comment.post %>
+      </p>
+    </div>
   <% end %>
 </section>
 
