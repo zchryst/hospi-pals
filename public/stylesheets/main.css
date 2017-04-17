@@ -73,17 +73,15 @@ a {
   color: black;
 }
 
-
-
 .container {
   padding: 30px;
   width: 30vw;
   height: 60vh;
   text-align: center;
-  background-color: white;
-  border: 3px solid #6AB393;
+  background-color: lightgrey;
+  border: 3px solid steelblue;
   display: inline-block;
-  margin: 12vh 1vw;
+  margin: 12vh 22.5vw;
   vertical-align: top;
   border-radius: 3em;
 }
@@ -102,17 +100,22 @@ aside {
   background-color: lightgrey;
 }
 
-
-
 .wrapper {
   height: 92vh;
   width: 75%;
   float: right;
 }
 
-.group-messages {
-  height: 76vh;
+.scroll-main {
   overflow: scroll;
+}
+
+.groups {
+  height: 92vh;
+}
+
+.group-messages {
+  height: 84vh;
   padding: 0 40px;
 }
 

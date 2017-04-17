@@ -34,7 +34,11 @@
       <section class="navigation">
         <div class="title">
           <span>GROUPS</span>
-          <span>&#x2295</span>
+          <span>
+            <a href="/groups">
+              &#x2295
+            </a>
+          </span>
         </div>
         <% current_user.groups.each do |user_group| %>
           <li><a href="/groups/<%= user_group.id %>">@  <%= user_group.name %></a></li>

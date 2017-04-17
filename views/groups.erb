@@ -1,11 +1,13 @@
 
-<% @groups.each do |group| %>
-  <div>
-    <h2><%= group.name %></h2>
-    <p><%= group.description %></p>
-    <form action="/groups/<%= group.id %>/join" method="post">
-      <button>Join</button>
+<div class="scroll-main groups">
+  <% @groups.each do |club| %>
+    <div>
+    <h2><%= club.name %></h2>
+    <p><%= club.description %></p>
+    <form action="/groups/<%= club.id %>/join" method="post">
+    <button>Join</button>
     </form>
     <hr>
-  </div>
-<% end %>
+    </div>
+    <% end %>
+</div>
