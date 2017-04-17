@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+header {
+  background-color: #416C8D;
+  height: 8vh;
+}
+
+.logo {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 40px;
+  display: inline-block;
+  margin-left: 1vw;
+  line-height: 8vh;
+  vertical-align: middle;
+}
+
+.session-status {
+  float: right;
+  text-align: right;
+  margin: .3em 1em;
+}
+
+#logout {
+  padding: .2em;
+  width: 100%;
+  border-radius: .5em;
+}
+
+aside {
+  display: inline;
+  height: 92vh;
+  float: left;
+  width: 25%;
+  background-color: lightgrey;
+}
+
+.content {
+  padding: 15px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vh 0 0 0;
+  padding: 0;
+}
+
+li {
+  margin-top: .5em;
+}
+
+.scroll {
+  overflow: scroll;
+}

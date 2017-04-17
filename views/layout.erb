@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World</title>
-  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <link rel="stylesheet" href="/stylesheets/reset.css">
+  <!-- <link rel='stylesheet' href='/stylesheets/main.css'> -->
+  <link rel="stylesheet" href="/stylesheets/new-main.css">
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
 </head>
 <body>
@@ -30,8 +32,7 @@
   </header>
 
   <% if logged_in? %>
-    <aside>
-      <section class="navigation">
+    <aside class="content scroll">
         <div class="title">
           <span>GROUPS</span>
           <span>
@@ -59,15 +60,13 @@
             <span>*</span>
             <span>Alfons Vanrostie</span>
           </li>
-      </section>
     </aside>
   <% end %>
 
 
 
-  <section class="wrapper">
-    <%= yield %>
-  </section>
+  <%= yield %>
+
 </body>
 <script src='/javascripts/application.js'></script>
 </html>

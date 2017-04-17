@@ -1,5 +1,6 @@
-<section class="group-messages scroll-main" id="group-messages">
-  <% @group.comments.each do |comment| %>
+<section class="wrapper">
+  <section class="group-messages scroll-main" id="group-messages">
+    <% @group.comments.each do |comment| %>
     <div class="message">
       <h3>
         <%= @group.users.find(comment.owner_id).username %>
@@ -8,11 +9,13 @@
         <%= comment.post %>
       </p>
     </div>
-  <% end %>
-</section>
+    <% end %>
+  </section>
 
-<section class="chat-bar">
-  <form action="/groups/<%= @group.id %>" method="post">
-    <input name="post" placeholder="message <%= @group.name %>">
-  </form>
+  <section class="chat-bar">
+    <form action="/groups/<%= @group.id %>" method="post">
+      <input name="post" placeholder="message <%= @group.name %>">
+    </form>
+  </section>
+
 </section>
