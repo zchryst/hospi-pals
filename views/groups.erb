@@ -1,14 +1,12 @@
-<section class="wrapper">
-  <div class="scroll-main groups">
+<section class="wrapper content scroll">
     <% @groups.each do |club| %>
-    <div>
-      <h2><%= club.name %></h2>
-      <p><%= club.description %></p>
-      <form action="/groups/<%= club.id %>/join" method="post">
-        <button>Join</button>
-      </form>
-      <hr>
-    </div>
+      <div>
+        <h2><%= club.name %></h2>
+        <p><%= club.description %></p>
+        <form action="/groups/<%= club.id %>/join" method="post">
+          <button>Join</button>
+        </form>
+        <hr>
+      </div>
     <% end %>
-  </div>
 </section>

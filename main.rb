@@ -104,7 +104,6 @@ post '/user/new' do
   user.email = params[:email]
   user.password = params[:password]
   user.age = params[:age].to_i
-  user.location_id = Location.find_by(location_name: params[:location].capitalize).id
   if user.save
     session[:user_id] = user.id
     redirect '/'

@@ -1,5 +1,5 @@
-<section class="wrapper">
-  <section class="group-messages scroll-main" id="group-messages">
+<section class="wrapper content chat-window">
+  <section class="messages scroll" id="group-messages">
     <% @group.comments.each do |comment| %>
     <div class="message">
       <h3>
@@ -12,10 +12,10 @@
     <% end %>
   </section>
 
-  <section class="chat-bar">
+  <div class="chat-bar">
     <form action="/groups/<%= @group.id %>" method="post">
       <input name="post" placeholder="message <%= @group.name %>">
     </form>
-  </section>
+  </div>
 
 </section>
